@@ -71,7 +71,7 @@ tables:
         type: VARCHAR(1)
       - name: EXTRA_COLUMN_NAME
         type: VARCHAR(16777216)
-      - name: EXTRA_COLUMN_NAME
+      - name: EXTRA_COLUMN_VALUE
         type: VARCHAR(16777216)
 
 - name: DB_MASTER_NEW
