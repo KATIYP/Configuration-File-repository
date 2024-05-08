@@ -18,6 +18,60 @@ tables:
         type: TIMESTAMP_NTZ(9)
       - name: REC_UPDATE_DTTM
         type: TIMESTAMP_NTZ(9)
+- name: FILE_MASTER_NEW
+    columns:
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: FILE_MSTR_ID
+        type: NUMBER(38,0)
+      - name: FILE_NAME
+        type: VARCHAR(250)
+      - name: SRC_SYS
+        type: VARCHAR(250)
+      - name: SRC_OBJ_NM
+        type: VARCHAR(250)
+      - name: SRC_OBJ_TYP
+        type: VARCHAR(250)
+      - name: FILE_EXTENSION
+        type: VARCHAR(250)
+      - name: FILE_DELIMITER
+        type: VARCHAR(250)
+      - name: PATTERN_MATCH_ENABLED
+        type: VARCHAR(3)
+      - name: SRC_STORAGE_TYPE
+        type: VARCHAR(250)
+      - name: SRC_LOCATION
+        type: VARCHAR(2500)
+      - name: SRC_LOCATION_OWNER
+        type: VARCHAR(250)
+      - name: VENDOR_NM
+        type: VARCHAR(250)
+      - name: FILE_HEADER_AVLB
+        type: VARCHAR(250)
+      - name: ARCHIVE_REQUIRED
+        type: VARCHAR(250)
+      - name: ARCHIVE_LOCATION
+        type: VARCHAR(2500)
+      - name: DOMAIN
+        type: VARCHAR(250)
+      - name: SUB_DOMAIN
+        type: VARCHAR(250)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: PATTERN_TYPE
+        type: VARCHAR(10)
+      - name: FREQUENCY
+        type: VARCHAR(1)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: EXTRA_COLUMNS_REQUIRED
+        type: VARCHAR(1)
+      - name: EXTRA_COLUMN_NAME
+        type: VARCHAR(16777216)
+      - name: EXTRA_COLUMN_NAME
+        type: VARCHAR(16777216)
 
 
 TASK_MASTER_DDL : 'create or replace TABLE VAW_AMER_DESIGN.USROICDIF.TASK_MASTER_NEW (TASK_ID NUMBER(38,0),TASK_TYPE VARCHAR(255),TASK_DESC VARCHAR(1500),ACTIVE_FLAG VARCHAR(1),TASK_AREA VARCHAR(50),REC_INSERT_DTTM TIMESTAMP_NTZ(9),REC_UPDATE_DTTM TIMESTAMP_NTZ(9));'
