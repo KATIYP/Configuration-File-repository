@@ -1,5 +1,6 @@
-database:VAW_AMER_DESIGN
-schema:USROICDIF
+info:
+  -database:VAW_AMER_DESIGN
+  -schema:USROICDIF
 
 tables:
   - name: TASK_MASTER_NEW
