@@ -2,8 +2,8 @@ database_name: VAW_AMER_DESIGN
 schema_name: USROICDIF
 
 tables:
-  - name: TASK_MASTER_NEW
-    columns:
+- name: TASK_MASTER_NEW
+  columns:
       - name: TASK_ID
         type: NUMBER(38,0)
       - name: TASK_TYPE
@@ -18,8 +18,9 @@ tables:
         type: TIMESTAMP_NTZ(9)
       - name: REC_UPDATE_DTTM
         type: TIMESTAMP_NTZ(9)
+        
 - name: FILE_MASTER_NEW
-    columns:
+  columns:
       - name: TASK_ID
         type: NUMBER(38,0)
       - name: FILE_MSTR_ID
@@ -73,6 +74,149 @@ tables:
       - name: EXTRA_COLUMN_NAME
         type: VARCHAR(16777216)
 
+- name: DB_MASTER_NEW
+  columns:
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: DB_MSTR_ID
+        type: NUMBER(38,0)
+      - name: SRC_OBJ_NM
+        type: VARCHAR(16777216)
+      - name: TGT_OBJ_NM
+        type: VARCHAR(16777216)
+      - name: SRC_OBJ_GIT_LOC
+        type: VARCHAR(16777216)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: LOAD_TYPE
+        type: VARCHAR(1)
+      - name: FREQUENCY
+        type: VARCHAR(1)
+      - name: DOMAIN
+        type: VARCHAR(100)
+      - name: SUB_DOMAIN
+        type: VARCHAR(100)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DTTM
+        type: TIMESTAMP_NTZ(9)
+
+- name: STANDARDIZATION_MASTER_NEW
+  columns:
+      - name: STND_MSTR_ID
+        type: NUMBER(38,0)
+      - name: SRC_OBJ_LIST
+        type: VARCHAR(10000)
+      - name: INPUT_STND_COL_KEYS
+        type: VARCHAR(10000)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: INPUT_STND_TYPE
+        type: VARCHAR(100)
+      - name: CUSTOM_SQL
+        type: VARCHAR(16777216)
+      - name: REC_INSERT_DATETIME
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DATETIME
+        type: TIMESTAMP_NTZ(9)
+      - name: TGT_OBJ_LIST
+        type: VARCHAR(10000)
+      - name: COL_NOT_REQ
+        type: VARCHAR(10000)
+
+- name: BATCH_LOG_NEW
+  columns:
+      - name: BATCH_ID
+        type: NUMBER(38,0)
+      - name: BATCH_START_TIMESTAMP
+        type: TIMESTAMP_NTZ(9)
+      - name: BATCH_END_TIMESTAMP
+        type: TIMESTAMP_NTZ(9)
+      - name: EXECUTION_STATUS
+        type: VARCHAR(16777216)
+      - name: BATCH_RUN_TIME
+        type: NUMBER(38,0)
+      - name: DOMAIN
+        type: VARCHAR(16777216)
+
+- name: TASK_LOG_NEW
+  columns:
+      - name: BATCH_ID
+        type: NUMBER(38,0)
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: FILE_MSTR_ID
+        type: NUMBER(38,0)
+      - name: DB_MSTR_ID
+        type: NUMBER(38,0)
+      - name: TASK_TYPE
+        type: VARCHAR(16777216)
+      - name: RUN_STATUS
+        type: VARCHAR(16777216)
+      - name: TASK_START_TIME
+        type: TIMESTAMP_NTZ(9)
+      - name: TASK_END_TIME
+        type: TIMESTAMP_NTZ(9)
+      - name: TASK_RUN_TIME
+        type: NUMBER(38,0)
+      - name: FILE_NAME
+        type: VARCHAR(16777216)
+      - name: TABLE_NAME
+        type: VARCHAR(16777216)
+      - name: DOMAIN
+        type: VARCHAR(16777216)
+        
+- name: ERROR_LOG_NEW
+  columns:
+      - name: BATCH_ID
+        type: NUMBER(38,0)
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: TASK_TYPE
+        type: VARCHAR(2500)
+      - name: DB_MSTR_ID
+        type: NUMBER(38,0)
+      - name: FILE_MSTR_ID
+        type: NUMBER(38,0)
+      - name: ERR_LOG
+        type: VARCHAR(100000)
+      - name: ERR_CD
+        type: VARCHAR(2500)
+      - name: ERR_DESC
+        type: VARCHAR(2500)
+      - name: ERROR_LOAD_TIME
+        type: TIMESTAMP_NTZ(9)
+      - name: DOMAIN
+        type: VARCHAR(2500)
+      - name: SUB_DOMAIN
+        type: VARCHAR(2500)
+      - name: FILE_NAME
+        type: VARCHAR(2500)
+      - name: TABLE_NAME
+        type: VARCHAR(2500)
+
+- name: AUDIT_LOG_NEW
+  columns:
+      - name: BATCH_ID
+        type: NUMBER(38,0)
+      - name: TASK_MSTR_ID
+        type: NUMBER(38,0)
+      - name: FILE_MSTR_ID
+        type: NUMBER(38,0)
+      - name: DB_MSTR_ID
+        type: NUMBER(38,0)
+      - name: TASK_TYPE
+        type: VARCHAR(200)
+      - name: TGT_OBJ_NM
+        type: VARCHAR(200)
+      - name: SRC_READ_CNT
+        type: NUMBER(38,0)
+      - name: TGT_WRITE_CNT
+        type: NUMBER(38,0)
+      - name: TGT_REJECT_COUNT
+        type: NUMBER(38,0)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
 
 TASK_MASTER_DDL : 'create or replace TABLE VAW_AMER_DESIGN.USROICDIF.TASK_MASTER_NEW (TASK_ID NUMBER(38,0),TASK_TYPE VARCHAR(255),TASK_DESC VARCHAR(1500),ACTIVE_FLAG VARCHAR(1),TASK_AREA VARCHAR(50),REC_INSERT_DTTM TIMESTAMP_NTZ(9),REC_UPDATE_DTTM TIMESTAMP_NTZ(9));'
 
