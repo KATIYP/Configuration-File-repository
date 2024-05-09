@@ -1,20 +1,14 @@
 table_name: TASK_MASTER_NEW
 dabase_name : VAW_AMER_DESIGN
 schema_name: USROICDIF
+table_name: TASK_MASTER_NEW
 
-table_records:
-    - TASK_ID: 1
-      TASK_TYPE: FILE_INGESTION
-      TASK_DESC: Bulk load all files from Sharepoint/S3 to Landing Layer(SF) of mROI
-      ACTIVE_FLAG: Y
-      TASK_AREA: FF_TO_LND
-      REC_INSERT_DTTM: 2024-05-09 05:07:00.544
-      REC_UPDATE_DTTM: NULL
-    - TASK_ID: 2
-      TASK_TYPE: DB_INGESTION
-      TASK_DESC: Load all the datasets from Snowflake Data Repos(Snowflake Source or Landing Layer) to Staging Layer of mROI
-      ACTIVE_FLAG: Y
-      TASK_AREA: LND_TO_STG
-      REC_INSERT_DTTM: 2024-05-09 05:07:00.544
-      REC_UPDATE_DTTM: NULL
-  
+table_rows:
+  - [1, 'FILE_INGESTION', 'Bulk load all files from Sharepoint/S3 to Landing Layer(SF) of mROI', 'Y', 'FF_TO_LND', '2024-05-09 05:07:00.544', NULL]
+  - [2, 'DB_INGESTION', 'Load all the datasets from Snowflake Data Repos(Snowflake Source or Landing Layer) to Staging Layer of mROI', 'LND_TO_STG', '2024-05-09 05:07:00.544', NULL]
+  - [3, 'DB_INGESTION', 'Load data from Stage to CDM', 'Y' , 'STG_TO_CDM' , '2024-02-26 05:07:00.544',NULL]
+
+
+
+
+
