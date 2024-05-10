@@ -207,6 +207,8 @@ tables:
         type: NUMBER(38,0)
       - name: TASK_TYPE
         type: VARCHAR(200)
+      - name: SRC_OBJ_NM
+        type: VARCHAR(200)       
       - name: TGT_OBJ_NM
         type: VARCHAR(200)
       - name: SRC_READ_CNT
