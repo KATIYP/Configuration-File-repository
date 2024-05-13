@@ -1,8 +1,8 @@
 database_name: VAW_AMER_DESIGN
 schema_name: USROICDIF
-project_key_name: &project_key_name USROICDIF
+project_key_name: USROICDIF
 tables:
-- name: *project_key_name_TASK_MASTER_NEW
+- name: TASK_MASTER_NEW
   columns:
       - name: TASK_ID
         type: NUMBER(38,0)
