@@ -1,6 +1,6 @@
 database_name: VAW_AMER_DESIGN
 schema_name: USROICDIF
-project_key_name: USROICDIF
+
 tables:
 - name: TASK_MASTER_NEW
   columns:
