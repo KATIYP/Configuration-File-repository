@@ -2,7 +2,7 @@ database_name: VAW_AMER_DESIGN
 schema_name: USROICDIF
 project_key_name: USROICDIF
 tables:
-- name: TASK_MASTER_NEW
+- name: TASK_MASTER
   columns:
       - name: TASK_ID
         type: NUMBER(38,0)
@@ -19,7 +19,7 @@ tables:
       - name: REC_UPDATE_DTTM
         type: TIMESTAMP_NTZ(9)
         
-- name: FILE_MASTER_NEW
+- name: FILE_MASTER
   columns:
       - name: TASK_ID
         type: NUMBER(38,0)
@@ -74,7 +74,7 @@ tables:
       - name: EXTRA_COLUMN_VALUE
         type: VARCHAR(16777216)
 
-- name: DB_MASTER_NEW
+- name: DB_MASTER
   columns:
       - name: TASK_ID
         type: NUMBER(38,0)
@@ -101,7 +101,7 @@ tables:
       - name: REC_UPDATE_DTTM
         type: TIMESTAMP_NTZ(9)
 
-- name: STANDARDIZATION_MASTER_NEW
+- name: STANDARDIZATION_MASTER
   columns:
       - name: STND_MSTR_ID
         type: NUMBER(38,0)
